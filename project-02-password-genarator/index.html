@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Password Generator</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="generator-box">
+                <h1>InstantKey</h1>
+                <h3>Password Generator</h3>
+
+                <div class="password-area">
+                    <div class="password-output">
+                        <p id="output">P4ssw0rd!</p>
+                    </div>
+                    <button class="copy-btn tooltip" onclick="copyPassword()">
+                        <span class="tooltiptext">Copy</span><i
+                            class="bi bi-clipboard"></i>
+                    </button>
+                </div>
+
+                <div class="options">
+                    <div class="length-setting">
+                        <div class="length-header">
+                            <span>Password Length</span>
+                            <span id="length-val">12</span>
+                        </div>
+                        <input type="range" id="length-slider" min="6" max="32"
+                            value="12">
+                    </div>
+
+                    <div class="checkbox-group">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" id="uppercase" checked>
+                            <span class="checkmark"></span>
+                            Uppercase
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" id="lowercase" checked>
+                            <span class="checkmark"></span>
+                            Lowercase
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" id="numbers" checked>
+                            <span class="checkmark"></span>
+                            Numbers
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" id="symbols" checked>
+                            <span class="checkmark"></span>
+                            Symbols
+                        </label>
+                    </div>
+                </div>
+
+                <button class="generate-btn">Generate</button>
+            </div>
+        </div>
+
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

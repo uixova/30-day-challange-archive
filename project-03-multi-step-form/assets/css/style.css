@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #4dccff;
+    background: linear-gradient(160deg, #4dccff 0%, #70ffac 50%, #fff48f 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.progress-bar {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.progress-bar .steps {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+}
+
+.steps .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    color: #242424;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 50%;
+    border: 4px solid #e0e0e0;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    z-index: 1;
+    transition: all 0.4s ease;
+}
+
+.steps .circle.active {
+    border-color: #4070f4;
+    color: #4070f4;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(64, 112, 244, 0.3);
+}
+
+.steps .progress {
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #e0e0e0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+.progress .indicator {
+    position: absolute;
+    height: 100%;
+    width: 0%; 
+    background: #4070f4;
+    transition: all 0.4s ease;
+}
+
+.multi-step-container {
+    width: 100%;
+}
+
+.step-content {
+    display: none; 
+    width: 100%;
+    animation: slideIn 0.5s ease;
+}
+
+.step-content.active {
+    display: block; 
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.wrapper {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.wrapper h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+}
+
+.input-data {
+    width: 100%;
+    height: 45px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-data input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 16px;
+    border-bottom: 2px solid rgba(0,0,0,0.2);
+    background: transparent;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.wrapper .input-data label {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #444;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.input-data input:focus ~ label,
+.input-data input:valid ~ label {
+    transform: translateY(-30px) scale(0.85);
+    color: #4070f4;
+    font-weight: 600;
+}
+
+.input-data .underline {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    background: #4070f4;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.input-data input:focus ~ .underline,
+.input-data input:valid ~ .underline {
+    transform: scaleX(1);
+}
+
+.step-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+#finish {
+    background: #28a745 !important; 
+}
+
+#finish:hover {
+    background: #218838 !important;
+}
+
+.step-buttons button {
+    padding: 12px 35px;
+    background: #4070f4;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(64, 112, 244, 0.2);
+    transition: all 0.3s ease;
+}
+
+.step-buttons button:hover:not(:disabled) {
+    background: #2653d4;
+    transform: translateY(-2px);
+}
+
+.step-buttons button:disabled {
+    background: #b1c5ff;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+#step-4 i {
+    display: block;
+    margin-bottom: 15px;
+}
+
+#step-4 p {
+    color: #333;
+    font-size: 15px;
+}

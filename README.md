@@ -34,7 +34,7 @@ Each folder represents **one full project**:
 
 /project-01-weather-app
 /project-02-password-generator
-/project-03-countdown-timer
+/project-03-multi-step-form
 ...
 /project-30-showcase
 
@@ -50,7 +50,7 @@ Every project includes:
 
 1. Weather App  
 2. Password Generator  
-3. Countdown Timer  
+3. Multi-Step Form
 4. Notes App  
 5. Quiz Game  
 6. Music Player  

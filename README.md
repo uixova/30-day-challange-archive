@@ -53,7 +53,7 @@ Every project includes:
 3. Multi-Step Form
 4. Notes App  
 5. Quiz Game  
-6. Music Player  
+6. Music Player
 7. Random Quote Generator  
 8. Calculator  
 9. Movie Search App  

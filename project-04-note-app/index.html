@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note App</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <section class="notepad" id="notepad">
+        <div class="container">
+            <div class="left-side">
+                <div class="color-picker">
+                    <div class="colors">
+                        <button class="color-btn pink" data-value="#ff1cbf"></button>
+                        <button class="color-btn purple" data-value="#ba34eb"></button>
+                        <button class="color-btn cyan" data-value="#34e8eb"></button>
+                        <button class="color-btn yellow" data-value="#fff821"></button>
+                        <button class="color-btn green" data-value="#34eb3d"></button>
+                        <button class="color-btn red" data-value="#ff1c1c"></button>
+                    </div>
+                </div>
+                <div class="note-input">
+                    <div class="note-controls">
+                        <button id="font-minus">-</button>
+                        <span id="font-size-display">16px</span>
+                        <button id="font-plus">+</button>
+                    </div>
+                    <div class="note-area">
+                        <textarea id="note"></textarea>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <div class="font-picker">
+                        <div class="fonts">
+                            <button class="font" data-font="Arial, sans-serif">Aa</button>
+                            <button class="font" data-font="'Times New Roman', serif">Aa</button>
+                            <button class="font" data-font="'Courier New', monospace">Aa</button>
+                            <button class="font" data-font="'Georgia', serif">Aa</button>
+                            <button class="font" data-font="'Verdana', sans-serif">Aa</button>
+                        </div>
+                    </div>
+                    <div class="backup">
+                        <button class="save-note"><i class="bi bi-floppy"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="history-container">
+                    <div class="history-header">
+                        <h1>History</h1>
+                        <button id="clear-all"><i class="bi bi-trash-fill"></i></button>
+                    </div>
+                    <div class="search-box">
+                        <input type="text" id="search-note" placeholder="Notlarda ara...">
+                    </div>
+                    <div class="history-area">
+                        <div class="history template" data-id="666">
+                            <div class="left-history">
+                                <h4>TITLE</h4>
+                                <p>text text text...</p>
+                            </div>
+                            <div class="right-history">
+                                <button class="note-delete history-btn"><i class="bi bi-trash"></i></button>
+                                <button class="note-change history-btn"><i class="bi bi-pencil-square"></i></button>
+                                <button class="note-download history-btn"><i class="bi bi-download"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

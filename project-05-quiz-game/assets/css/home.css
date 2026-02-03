@@ -1,0 +1,126 @@
+.home-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 60px 0 20px 0;
+}
+
+.home-middle {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 40px;
+}
+
+.home-middle h1 {
+    font-size: 7rem; 
+    font-weight: 800;
+    letter-spacing: -2px;
+    line-height: 1;
+    background: linear-gradient(to right, #b833ff, #f5576c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 15px;
+}
+
+.home-middle p {
+    color: #555;
+    font-size: 1.5rem;
+    font-weight: 400;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.4;
+}
+
+.home-btns {
+    display: flex;
+    gap: 40px;
+    margin-bottom: auto;
+}
+
+.home-cta-btn {
+    width: 220px;
+    padding: 22px;
+    margin-top: 50px;
+    border: none;
+    border-radius: 35px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    color: #272727;
+    text-decoration: none;
+    background: linear-gradient(to right, #f8a5c2, #f7d794);
+    box-shadow: 0 10px 20px rgba(248, 165, 194, 0.3);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.home-cta-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 30px rgba(248, 165, 194, 0.5);
+}
+
+.home-footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.home-footer p {
+    background: #222;
+    color: #eee;
+    padding: 10px 35px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.side-history {
+    position: fixed;
+    right: -320px;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    background: #1a1a1a;
+    color: white;
+    padding: 30px 20px;
+    z-index: 9999;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.3);
+    transition: right 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    overflow-y: auto;
+}
+
+.side-history.active {
+    right: 0;
+}
+
+.side-history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #b833ff;
+    color: #222;
+    padding-bottom: 10px;
+}
+
+.close-sidebar {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.history-card {
+    background: rgba(255,255,255,0.08);
+    margin-bottom: 12px;
+    color: #272727;
+    padding: 15px;
+    border-radius: 12px;
+    border-left: 5px solid #b833ff;
+}

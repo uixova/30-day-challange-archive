@@ -1,0 +1,386 @@
+.myquizs {
+    width: 100%;
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    overflow-y: auto;
+}
+
+.myquiz-title h2, .section-title {
+    font-size: 1.8rem;
+    color: #222;
+    margin-bottom: 20px;
+    font-weight: 800;
+    border-left: 6px solid #b833ff;
+    padding-left: 15px;
+}
+
+.quizs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.quiz-box {
+    background: #ffffff;
+    border-radius: 25px;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #eee;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.quiz-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(184, 51, 255, 0.15);
+}
+
+.quiz-box-left h1 {
+    font-size: 1.4rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.quiz-test-right {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.quiz-test-right button {
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    font-size: 1.2rem;
+}
+
+.quiz-edit { background: #eefdf3; color: #27ae60; }
+.quiz-edit:hover { background: #27ae60; color: white; }
+
+.quiz-delete { background: #fff1f1; color: #eb5757; }
+.quiz-delete:hover { background: #eb5757; color: white; }
+
+.play-btn {
+    background: #b833ff !important;
+    color: white !important;
+    width: 55px !important;
+    height: 55px !important;
+    box-shadow: 0 5px 15px rgba(184, 51, 255, 0.3);
+}
+
+.play-btn:hover {
+    transform: scale(1.1);
+    background: #a226e6 !important;
+}
+
+.create-wrapper {
+    display: flex;
+    height: 90vh;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.create-left-panel {
+    flex: 3;
+    background: #222;
+    border-radius: 30px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.workspace {
+    display: flex;
+    gap: 30px;
+    flex-grow: 1;
+}
+
+.options-container { flex: 1; display: flex; flex-direction: column; gap: 15px; }
+.question-area { flex: 1.5; color: white; }
+
+.quiz-option-btn {
+    background: rgba(255,255,255,0.1);
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.opt-label {
+    background: white;
+    color: #222;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: 800;
+}
+
+.quiz-option-btn input {
+    background: transparent;
+    border: none;
+    color: white;
+    width: 100%;
+    outline: none;
+}
+
+.question-canvas textarea {
+    width: 100%;
+    height: 200px;
+    background: rgba(255,255,255,0.05);
+    border: 2px dashed rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 20px;
+    color: white;
+    font-size: 1.2rem;
+    resize: none;
+}
+
+.game-header-modern {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+    background: #fff;
+    border-bottom: 2px solid #f5f5f5;
+}
+
+.progress-container {
+    width: 100%;
+    height: 10px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #b833ff, #f5576c);
+    width: 0%;
+    transition: width 0.4s ease;
+}
+
+.game-timer-circle {
+    width: 60px; height: 60px;
+    background: #222;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    border: 4px solid #b833ff;
+}
+
+.question-box-modern {
+    background: white;
+    margin: 40px auto;
+    padding: 60px 40px;
+    border-radius: 35px;
+    text-align: center;
+    max-width: 900px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.game-options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.modern-opt-btn {
+    background: #fdfdfd;
+    border: 2px solid #eee;
+    padding: 22px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.modern-opt-btn:hover {
+    border-color: #b833ff;
+    background: #fefaff;
+}
+
+.modern-opt-circle {
+    width: 40px; height: 40px;
+    background: #222;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-card-modern {
+    background: white;
+    padding: 50px;
+    border-radius: 40px;
+    text-align: center;
+    max-width: 500px;
+    margin: 50px auto;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+}
+
+.score-main #res-score {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #b833ff;
+}
+
+.side-history {
+    position: fixed;
+    right: -350px;
+    top: 0;
+    width: 350px;
+    height: 100%;
+    background: white;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+    transition: 0.4s;
+    z-index: 9999;
+    padding: 30px;
+}
+
+.side-history.active { right: 0; }
+
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex; align-items: center; justify-content: center;
+    z-index: 10001;
+}
+
+.modal-content {
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.pause-btn {
+    background: #f5f5f5;
+    border: none;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.pause-btn:hover {
+    background: #b833ff;
+    color: white;
+    transform: scale(1.1);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; 
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    display: flex; align-items: center; justify-content: center;
+    z-index: 10001;
+}
+
+.modal-content {
+    background: white;
+    padding: 50px 40px;
+    border-radius: 40px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.modal-content h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+.modal-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal-btn {
+    padding: 15px 25px;
+    border-radius: 18px;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.modal-btn.resume {
+    background: #b833ff;
+    color: white;
+    box-shadow: 0 5px 15px rgba(184, 51, 255, 0.3);
+}
+
+.modal-btn.resume:hover {
+    background: #a226e6;
+    transform: translateY(-3px);
+}
+
+.modal-btn.finish {
+    background: #eefdf3;
+    color: #27ae60;
+}
+
+.modal-btn.finish:hover {
+    background: #27ae60;
+    color: white;
+}
+
+.modal-btn.exit {
+    background: #fff1f1;
+    color: #eb5757;
+}
+
+.modal-btn.exit:hover {
+    background: #eb5757;
+    color: white;
+}

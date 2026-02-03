@@ -1,0 +1,131 @@
+[
+  {
+    "id": 101,
+    "title": "Genel Kültür Karışık",
+    "duration": 120,
+    "questions": [
+      { "text": "Gökyüzü neden mavi görünür?", "options": { "a": "Okyanus yansıması", "b": "Atmosferin ışığı saçması", "c": "Bulut rengi", "d": "Uzay rengi" }, "correct": "b" },
+      { "text": "Dünyanın en yüksek dağı hangisidir?", "options": { "a": "Everest", "b": "K2", "c": "Ağrı Dağı", "d": "Fujiyama" }, "correct": "a" },
+      { "text": "Aspirinin ham maddesi olan ağaç hangisidir?", "options": { "a": "Meşe", "b": "Çam", "c": "Söğüt", "d": "Kavak" }, "correct": "c" },
+      { "text": "Hangi gezegen 'Kızıl Gezegen' olarak bilinir?", "options": { "a": "Venüs", "b": "Mars", "c": "Jüpiter", "d": "Satürn" }, "correct": "b" },
+      { "text": "İstiklal Marşı'nın şairi kimdir?", "options": { "a": "Ziya Gökalp", "b": "Necip Fazıl", "c": "Mehmet Akif Ersoy", "d": "Nazım Hikmet" }, "correct": "c" }
+    ]
+  },
+  {
+    "id": 102,
+    "title": "Yazılım Dünyası",
+    "duration": 90,
+    "questions": [
+      { "text": "JavaScript'te sabit değişken hangisidir?", "options": { "a": "var", "b": "let", "c": "const", "d": "set" }, "correct": "c" },
+      { "text": "CSS ne anlama gelir?", "options": { "a": "Cascading Style Sheets", "b": "Computer Style System", "c": "Creative Space Sheet", "d": "Control Style Sheet" }, "correct": "a" },
+      { "text": "Hangisi bir backend dilidir?", "options": { "a": "HTML", "b": "CSS", "c": "PHP", "d": "Sass" }, "correct": "c" },
+      { "text": "React hangi şirket tarafından geliştirilmiştir?", "options": { "a": "Google", "b": "Microsoft", "c": "Meta (Facebook)", "d": "Twitter" }, "correct": "c" },
+      { "text": "JSON verisi hangi parantezlerle başlar ve biter?", "options": { "a": "[]", "b": "{}", "c": "()", "d": "<>" }, "correct": "b" }
+    ]
+  },
+  {
+    "id": 103,
+    "title": "Matematik Hızlı Test",
+    "duration": 60,
+    "questions": [
+      { "text": "9 x 8 işleminin sonucu kaçtır?", "options": { "a": "64", "b": "72", "c": "81", "d": "76" }, "correct": "b" },
+      { "text": "Hangisi bir asal sayıdır?", "options": { "a": "4", "b": "9", "c": "15", "d": "17" }, "correct": "d" },
+      { "text": "Pi sayısı yaklaşık kaçtır?", "options": { "a": "3.12", "b": "3.14", "c": "3.16", "d": "3.18" }, "correct": "b" },
+      { "text": "Bir üçgenin iç açıları toplamı kaçtır?", "options": { "a": "90", "b": "180", "c": "270", "d": "360" }, "correct": "b" }
+    ]
+  },
+  {
+    "id": 104,
+    "title": "Coğrafya Keşfi",
+    "duration": 100,
+    "questions": [
+      { "text": "Türkiye'nin en büyük gölü hangisidir?", "options": { "a": "Tuz Gölü", "b": "Van Gölü", "c": "Beyşehir Gölü", "d": "Eğirdir Gölü" }, "correct": "b" },
+      { "text": "Hangisi bir kıta değildir?", "options": { "a": "Avustralya", "b": "Antarktika", "c": "Grönland", "d": "Afrika" }, "correct": "c" },
+      { "text": "En çok komşusu olan ülke hangisidir?", "options": { "a": "Rusya", "b": "Brezilya", "c": "Çin", "d": "Hindistan" }, "correct": "c" },
+      { "text": "Ekvatorun geçtiği kıta hangisidir?", "options": { "a": "Avrupa", "b": "Antarktika", "c": "Güney Amerika", "d": "Avustralya" }, "correct": "c" }
+    ]
+  },
+  {
+    "id": 105,
+    "title": "Tarih Yolculuğu",
+    "duration": 120,
+    "questions": [
+      { "text": "İstanbul hangi yıl fethedilmiştir?", "options": { "a": "1299", "b": "1453", "c": "1517", "d": "1923" }, "correct": "b" },
+      { "text": "Osmanlı Devleti'nin kurucusu kimdir?", "options": { "a": "Ertuğrul Gazi", "b": "Osman Bey", "c": "Orhan Bey", "d": "Fatih Sultan Mehmet" }, "correct": "b" },
+      { "text": "Cumhuriyet kaç yılında ilan edildi?", "options": { "a": "1919", "b": "1920", "c": "1922", "d": "1923" }, "correct": "d" },
+      { "text": "İlk kağıt parayı hangi uygarlık buldu?", "options": { "a": "Lidya", "b": "Çin", "c": "Mısır", "d": "Roma" }, "correct": "b" }
+    ]
+  },
+  {
+    "id": 106,
+    "title": "Bilim ve Teknoloji",
+    "duration": 80,
+    "questions": [
+      { "text": "Suyun kimyasal formülü nedir?", "options": { "a": "CO2", "b": "H2O", "c": "NaCl", "d": "O2" }, "correct": "b" },
+      { "text": "Yapay zekanın babası kabul edilen kişi kimdir?", "options": { "a": "Steve Jobs", "b": "Alan Turing", "c": "Elon Musk", "d": "Bill Gates" }, "correct": "b" },
+      { "text": "Bluetooth teknolojisi adını nereden almıştır?", "options": { "a": "Bir meyveden", "b": "Bir Danimarka kralından", "c": "Bir gökyüzü olayından", "d": "Bir gemiden" }, "correct": "b" }
+    ]
+  },
+  {
+    "id": 107,
+    "title": "Spor Dünyası",
+    "duration": 60,
+    "questions": [
+      { "text": "Bir futbol maçı normal sürede kaç dakikadır?", "options": { "a": "45", "b": "80", "c": "90", "d": "100" }, "correct": "c" },
+      { "text": "Basketbolda bir periyot kaç dakikadır? (NBA)", "options": { "a": "10", "b": "12", "c": "15", "d": "20" }, "correct": "b" },
+      { "text": "Olimpiyat halkaları kaç adettir?", "options": { "a": "3", "b": "4", "c": "5", "d": "6" }, "correct": "c" }
+    ]
+  },
+  {
+    "id": 108,
+    "title": "Sanat ve Edebiyat",
+    "duration": 90,
+    "questions": [
+      { "text": "Mona Lisa tablosu kime aittir?", "options": { "a": "Picasso", "b": "Dali", "c": "Leonardo da Vinci", "d": "Van Gogh" }, "correct": "c" },
+      { "text": "Don Kişot kitabının yazarı kimdir?", "options": { "a": "Shakespeare", "b": "Cervantes", "c": "Dostoyevski", "d": "Tolstoy" }, "correct": "b" },
+      { "text": "Türk edebiyatının ilk romanı hangisidir?", "options": { "a": "Araba Sevdası", "b": "Mai ve Siyah", "c": "Taaşşuk-ı Talat ve Fitnat", "d": "Eylül" }, "correct": "c" }
+    ]
+  },
+  {
+    "id": 109,
+    "title": "Uzay ve Galaksi",
+    "duration": 75,
+    "questions": [
+      { "text": "Güneş sistemindeki en büyük gezegen hangisidir?", "options": { "a": "Dünya", "b": "Mars", "c": "Jüpiter", "d": "Neptün" }, "correct": "c" },
+      { "text": "Işık hızı saniyede yaklaşık kaç km'dir?", "options": { "a": "100.000", "b": "300.000", "c": "500.000", "d": "1.000.000" }, "correct": "b" },
+      { "text": "Dünya'ya en yakın yıldız hangisidir?", "options": { "a": "Polaris", "b": "Sirius", "c": "Güneş", "d": "Proxima Centauri" }, "correct": "c" }
+    ]
+  },
+  {
+    "id": 110,
+    "title": "Biyoloji ve Vücudumuz",
+    "duration": 90,
+    "questions": [
+      { "text": "İnsan vücudundaki en güçlü kas hangisidir?", "options": { "a": "Pazı", "b": "Çene kası", "c": "Kalp", "d": "Dil" }, "correct": "b" },
+      { "text": "Vücudumuzdaki en küçük kemik nerede bulunur?", "options": { "a": "Burun", "b": "El bileği", "c": "Kulak", "d": "Ayak parmağı" }, "correct": "c" },
+      { "text": "Yetişkin bir insanda yaklaşık kaç kemik vardır?", "options": { "a": "150", "b": "206", "c": "250", "d": "300" }, "correct": "b" },
+      { "text": "Kan gruplarından hangisi 'genel alıcı' olarak bilinir?", "options": { "a": "0 Negatif", "b": "A Pozitif", "c": "B Negatif", "d": "AB Pozitif" }, "correct": "d" }
+    ]
+  },
+  {
+    "id": 111,
+    "title": "Sinema ve Kültür",
+    "duration": 100,
+    "questions": [
+      { "text": "Sinema tarihinde 'Baba' (The Godfather) filminin yönetmeni kimdir?", "options": { "a": "Steven Spielberg", "b": "Martin Scorsese", "c": "Francis Ford Coppola", "d": "Quentin Tarantino" }, "correct": "c" },
+      { "text": "Hangi film 'En İyi Film' dalında Oscar kazanan ilk animasyon yapımıdır?", "options": { "a": "Aslan Kral", "b": "Toy Story", "c": "Güzel ve Çirkin (Aday gösterildi)", "d": "Hiçbiri (Henüz kazanan yok)" }, "correct": "d" },
+      { "text": "Yüzüklerin Efendisi serisinin yazarı kimdir?", "options": { "a": "J.K. Rowling", "b": "George R.R. Martin", "c": "J.R.R. Tolkien", "d": "C.S. Lewis" }, "correct": "c" }
+    ]
+  },
+  {
+    "id": 112,
+    "title": "Dünya Mutfakları",
+    "duration": 80,
+    "questions": [
+      { "text": "Suşi hangi ülkeye ait bir yemektir?", "options": { "a": "Çin", "b": "Güney Kore", "c": "Tayland", "d": "Japonya" }, "correct": "d" },
+      { "text": "Pizza ve makarna hangi ülkenin mutfağıyla özdeşleşmiştir?", "options": { "a": "Fransa", "b": "İtalya", "c": "İspanya", "d": "Yunanistan" }, "correct": "b" },
+      { "text": "Geleneksel bir Türk içeceği olan ayranın temel malzemeleri nelerdir?", "options": { "a": "Süt ve Şeker", "b": "Yoğurt ve Su", "c": "Kefir ve Tuz", "d": "Peynir altı suyu" }, "correct": "b" },
+      { "text": "Taco ve Burrito hangi ülkenin meşhur lezzetleridir?", "options": { "a": "Brezilya", "b": "Arjantin", "c": "Meksika", "d": "Portekiz" }, "correct": "c" }
+    ]
+  }
+]

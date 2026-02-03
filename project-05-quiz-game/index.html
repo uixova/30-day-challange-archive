@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quizlo - Kendi Testini Oluştur</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/home.css">
+        <link rel="stylesheet" href="assets/css/quiz.css">
+        <link rel="stylesheet" href="assets/css/create.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    </head>
+    <body>
+
+        <div id="side-history" class="side-history">
+            <div class="side-history-header">
+                <h3><i class="bi bi-clock-history"></i> Geçmiş</h3>
+                <button onclick="toggleHistory()" class="close-sidebar"><i
+                        class="bi bi-x-lg"></i></button>
+            </div>
+            <div id="history-list">
+                <p class="empty-msg">Henüz test yok.</p>
+            </div>
+        </div>
+
+        <section id="home" class="main-section">
+            <div class="container">
+                <header class="navbar">
+                    <div></div> <ul>
+                        <li><a href="#"
+                                onclick="showSection('home')">Anasayfa</a></li>
+                        <li><a href="#"
+                                onclick="showSection('quiz')">Testler</a></li>
+                        <li><a href="#"
+                                onclick="showSection('create')">Oluştur</a></li>
+                    </ul>
+                    <div class="nav-right">
+                        <button onclick="toggleHistory()"
+                            class="history-toggle-btn">
+                            <i class="bi bi-layout-sidebar-reverse"></i>
+                        </button>
+                    </div>
+                </header>
+
+                <div class="home-container">
+                    <div class="home-middle title">
+                        <h1>QUİZLO</h1>
+                        <p>Sende hemen testler oluştur ve çözmeye başla</p>
+                    </div>
+
+                    <div class="home-btns">
+                        <button onclick="showSection('create')"
+                            class="home-cta-btn">Test Oluştur</button>
+                        <button onclick="showSection('quiz')"
+                            class="home-cta-btn">Test Çöz</button>
+                    </div>
+
+                    <div class="home-footer">
+                        <p>Design by uixova</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="quiz" class="main-section" style="display: none;">
+            <div class="container">
+                <div class="quiz-container">
+                    <header>
+                        <nav class="navbar">
+                            <ul>
+                                <li><a href="#"
+                                        onclick="showSection('home')">Anasayfa</a></li>
+                                <li><a href="#"
+                                        onclick="showSection('quiz')">Testler</a></li>
+                                <li><a href="#"
+                                        onclick="showSection('create')">Oluştur</a></li>
+                            </ul>
+                        </nav>
+                    </header>
+                    <div class="myquizs">
+                        <div class="myquiz-title"><h2>Senin Testlerin
+                                :</h2></div>
+                        <div id="user-quizzes" class="quizs"></div>
+
+                        <div class="myquiz-title"><h2>Hazır Testler (JSON)
+                                :</h2></div>
+                        <div id="json-quizzes" class="quizs"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="create" class="main-section" style="display: none;">
+            <div class="container">
+                <div class="create-wrapper">
+                    <div class="create-left-panel">
+                        <div class="panel-header">
+                            <button onclick="showSection('quiz')"
+                                class="icon-btn-top"><i
+                                    class="bi bi-escape"></i></button>
+                            <h1 id="display-test-title"
+                                onclick="changeQuizTitle()"
+                                style="cursor: pointer; border-bottom: 2px dashed #b833ff;">Yeni
+                                Test 1</h1>
+                            <div
+                                style="display:flex; align-items:center; gap:10px;">
+                                <label
+                                    style="color:black; font-size:0.8rem;">Süre
+                                    (Sn):</label>
+                                <input type="number" id="test-duration"
+                                    value="60"
+                                    style="width: 50px; padding: 5px; border-radius: 5px; border: 1px solid #000;">
+                                <button id="btn-save-quiz"
+                                    class="icon-btn-top"><i
+                                        class="bi bi-floppy"></i></button>
+                            </div>
+                        </div>
+                        <div class="workspace">
+                            <div class="options-container">
+                                <div class="quiz-option-btn color-a">
+                                    <span class="opt-label">A</span>
+                                    <input type="text" id="input-a"
+                                        placeholder="Seçenek A...">
+                                </div>
+                                <div class="quiz-option-btn color-b">
+                                    <span class="opt-label">B</span>
+                                    <input type="text" id="input-b"
+                                        placeholder="Seçenek B...">
+                                </div>
+                                <div class="quiz-option-btn color-c">
+                                    <span class="opt-label">C</span>
+                                    <input type="text" id="input-c"
+                                        placeholder="Seçenek C...">
+                                </div>
+                                <div class="quiz-option-btn color-d">
+                                    <span class="opt-label">D</span>
+                                    <input type="text" id="input-d"
+                                        placeholder="Seçenek D...">
+                                </div>
+                                <div class="nav-control-btns">
+                                    <button id="btn-prev"
+                                        class="action-nav-btn">Önceki</button>
+                                    <button id="btn-next"
+                                        class="action-nav-btn">Sonraki</button>
+                                </div>
+                            </div>
+                            <div class="question-area">
+                                <span id="current-question-count">1/1</span>
+                                <div class="question-canvas">
+                                    <textarea id="question-text"
+                                        placeholder="Sorunuzu buraya yazın..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="create-right-panel">
+                        <div class="sidebar-top">
+                            <h2>Kayıtlı Sorular</h2>
+                            <button id="btn-delete-all" class="icon-btn-top"><i
+                                    class="bi bi-trash"></i></button>
+                        </div>
+                        <div id="saved-questions-list"
+                            class="tests-scroll-area"></div>
+                        <div class="sidebar-bottom"><p>Created by
+                                uixova</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="game-play" class="main-section" style="display: none;">
+            <div class="container game-bg">
+                <div class="game-header-modern">
+                    <button onclick="pauseGame()" class="pause-btn"><i
+                            class="bi bi-pause-fill"></i></button>
+                    <div class="game-center-info">
+                        <h2 id="game-title">Yükleniyor...</h2>
+                        <div class="progress-container">
+                            <div id="progress-bar-fill"
+                                class="progress-fill"></div>
+                        </div>
+                    </div>
+                    <div class="game-timer-circle">
+                        <span id="game-timer">60</span>
+                    </div>
+                </div>
+
+                <div class="game-body-modern">
+                    <div class="question-box-modern">
+                        <div class="q-badge">Soru <span
+                                id="game-progress">1/1</span></div>
+                        <h1 id="game-question-text">Soru metni buraya
+                            gelecek?</h1>
+                    </div>
+
+                    <div class="game-options-grid">
+                        <button class="modern-opt-btn btn-a"
+                            onclick="checkAnswer('a')">
+                            <span class="modern-opt-circle">A</span>
+                            <span id="game-opt-a">Seçenek</span>
+                        </button>
+                        <button class="modern-opt-btn btn-b"
+                            onclick="checkAnswer('b')">
+                            <span class="modern-opt-circle">B</span>
+                            <span id="game-opt-b">Seçenek</span>
+                        </button>
+                        <button class="modern-opt-btn btn-c"
+                            onclick="checkAnswer('c')">
+                            <span class="modern-opt-circle">C</span>
+                            <span id="game-opt-c">Seçenek</span>
+                        </button>
+                        <button class="modern-opt-btn btn-d"
+                            onclick="checkAnswer('d')">
+                            <span class="modern-opt-circle">D</span>
+                            <span id="game-opt-d">Seçenek</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="result-screen" class="main-section" style="display: none;">
+            <div class="container result-bg">
+                <div class="result-card-modern">
+                    <div class="confetti-icon">🎉</div>
+                    <h1>Test Tamamlandı!</h1>
+
+                    <div class="score-main">
+                        <span id="res-score">0</span>
+                        <label>TOPLAM PUAN</label>
+                    </div>
+
+                    <div class="result-stats-grid">
+                        <div class="stat-item correct">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span id="res-correct">0</span>
+                            <label>Doğru</label>
+                        </div>
+                        <div class="stat-item wrong">
+                            <i class="bi bi-x-circle-fill"></i>
+                            <span id="res-wrong">0</span>
+                            <label>Yanlış</label>
+                        </div>
+                        <div class="stat-item empty">
+                            <i class="bi bi-dash-circle-fill"></i>
+                            <span id="res-empty">0</span>
+                            <label>Boş</label>
+                        </div>
+                    </div>
+
+                    <button onclick="showSection('quiz')"
+                        class="home-cta-btn result-btn">Anasayfaya Dön</button>
+                </div>
+            </div>
+        </section>
+
+        <div id="pause-modal" class="modal-overlay" style="display: none;">
+            <div class="modal-content">
+                <h2>Test Duraklatıldı</h2>
+                <div class="modal-btns">
+                    <button onclick="resumeGame()"
+                        class="modal-btn resume">Devam Et</button>
+                    <button onclick="endGames()" class="modal-btn finish">Testi
+                        Bitir</button>
+                    <button onclick="confirmExitGame()"
+                        class="modal-btn exit">Çıkış Yap</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

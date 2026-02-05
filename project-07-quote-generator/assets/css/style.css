@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #94B9FF;
+    background: linear-gradient(90deg, rgba(148, 185, 255, 1) 0%, rgba(232, 148, 255, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 95%;
+    max-width: 600px; /* Çok genişleyip dağılmasın */
+    min-height: 500px; /* Sabit height yerine min-height */
+    background: rgba(255, 255, 255, 0.25); /* Şeffaflık */
+    backdrop-filter: blur(15px); /* Cam efekti */
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.container header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.container header h1 {
+    margin-bottom: 50px;
+    font-size: 40px;
+}
+
+hr {
+    border: 1px solid black;
+    margin-bottom: 50px;
+}
+
+.generated-text-container {
+    padding: 0 40px ;
+}
+
+.text-generated-panel {
+    background: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    min-height: 200px; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative; 
+}
+
+.copy-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: auto;
+    bottom: 5px;
+    right: 5px;
+    border: none;
+    background: #272727;
+    padding: 15px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 21px;
+    transition: 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.copy-btn:hover {
+    background: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.copy-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.1s ease;
+}
+
+.generate-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 80px;
+}
+
+.generate-button .generate-btn {
+    background: #8c52ff;
+    border: none;
+    width: 100%;
+    max-width: 250px;
+    padding: 15px 20px;
+    font-size: 24px;
+    border-radius: 22px;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s ease;
+    box-shadow: 0 6px 20px rgba(140, 82, 255, 0.25);
+}
+
+.generate-btn:hover {
+    background: #703adb;
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(112, 58, 219, 0.45), 0 0 10px rgba(140, 82, 255, 0.2);
+}
+
+.generate-btn:active {
+    transform: translateY(1px) scale(0.98);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.1s ease;
+}
+
+.container-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-footer p {
+    font-size: 21px;
+    color: #272727;
+}
+
+.container-footer p a {
+    color: #272727;
+    text-decoration: none;
+}

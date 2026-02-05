@@ -19,10 +19,10 @@ body {
 
 .container {
     width: 95%;
-    max-width: 600px; /* Çok genişleyip dağılmasın */
-    min-height: 500px; /* Sabit height yerine min-height */
-    background: rgba(255, 255, 255, 0.25); /* Şeffaflık */
-    backdrop-filter: blur(15px); /* Cam efekti */
+    max-width: 600px; 
+    min-height: 500px; 
+    background: rgba(255, 255, 255, 0.25); 
+    backdrop-filter: blur(15px); 
     -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 40px;

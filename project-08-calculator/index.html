@@ -1,112 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Multi-Step Form </title>
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    </head>
-    <body>
-
-        <div class="container">
-            <div class="progress-bar">
-                <div class="steps">
-                    <span class="circle active">1</span>
-                    <span class="circle">2</span>
-                    <span class="circle">3</span>
-                    <span class="circle">4</span>
-                    <div class="progress">
-                        <span class="indicator"></span>
-                    </div>
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator App</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="calcualtor-container">
+            <div class="calculator-display">
+                <div id="history" class="history-display"></div>
+                <input type="text" id="display" name="display" readonly value="0">
             </div>
+                <div class="calculator-buttons">
+                <div class="buttons-grid">
+                    <button value="C" class="button clear" data-type="clear">C</button>
+                    <button value="←" class="button backspace" data-type="backspace"><i class="bi bi-backspace"></i></button>
+                    <button value="%" class="button operator" data-type="operator">%</button>
+                    <button value="/" class="button operator" data-type="operator">/</button>
 
-            <div class="multi-step-container">
+                    <button value="7" class="button number" data-type="number">7</button>
+                    <button value="8" class="button number" data-type="number">8</button>
+                    <button value="9" class="button number" data-type="number">9</button>
+                    <button value="x" class="button operator" data-type="operator">x</button>
+                
+                    <button value="4" class="button number" data-type="number">4</button>
+                    <button value="5" class="button number" data-type="number">5</button>
+                    <button value="6" class="button number" data-type="number">6</button>
+                    <button value="-" class="button operator" data-type="operator">-</button>
+                
+                    <button value="1" class="button number" data-type="number">1</button>
+                    <button value="2" class="button number" data-type="number">2</button>
+                    <button value="3" class="button number" data-type="number">3</button>
+                    <button value="+" class="button operator plus" data-type="operator">+</button>
 
-                <div class="step-content active" id="step-1">
-                    <div class="wrapper">
-                        <h2>Account Info</h2>
-                        <div class="input-data">
-                            <input type="text" id="username" minlength="3" required>
-                            <div class="underline"></div>
-                            <label>Username</label>
-                        </div>
-                        <div class="input-data">
-                            <input type="email" id="email" required>
-                            <div class="underline"></div>
-                            <label>Email Address</label>
-                        </div>
-                    </div>
+                    <button value="0" class="button number zero" data-type="number">0</button>
+                    <button value="." class="button decimal" data-type="decimal">.</button>
+                    <button value="=" class="button equals" data-type="equals">=</button>
                 </div>
-
-                <div class="step-content" id="step-2">
-                    <div class="wrapper">
-                        <h2>Personal Info</h2>
-                        <div class="input-data">
-                            <input type="text" id="fullname" required>
-                            <div class="underline"></div>
-                            <label>Full Name</label>
-                        </div>
-                        <div class="input-data">
-                            <input type="password" id="password" required>
-                            <div class="underline"></div>
-                            <label>Password</label>
-                        </div>
-                        <div class="input-data">
-                            <input type="password" id="passwordConfirm"
-                                required>
-                            <div class="underline"></div>
-                            <label>Password (Again)</label>
-                        </div>
-                        <small id="passError"
-                            style="color: #ff4d4d; display: none; font-size: 12px; margin-top: -20px; margin-bottom: 10px;">Şifreler
-                            uyuşmuyor!</small>
-                    </div>
-                </div>
-
-                <div class="step-content" id="step-3">
-                    <div class="wrapper">
-                        <h2>Terms & Policy</h2>
-                        <div class="checkbox-group"
-                            style="display: flex; flex-direction: column; gap: 15px; text-align: left; margin-top: 20px;">
-                            <label
-                                style="cursor: pointer; display: flex; align-items: center; gap: 10px;">
-                                <input type="checkbox" id="terms"
-                                    style="width: 20px; height: 20px;">
-                                I agree to the terms and conditions.
-                            </label>
-                            <label
-                                style="cursor: pointer; display: flex; align-items: center; gap: 10px;">
-                                <input type="checkbox" id="newsletter"
-                                    style="width: 20px; height: 20px;">
-                                Subscribe to newsletter.
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="step-content" id="step-4">
-                    <div class="wrapper" style="text-align: center;">
-                        <i class="bi bi-check-circle-fill"
-                            style="font-size: 80px; color: #4070f4;"></i>
-                        <h2>All Done!</h2>
-                        <p>Your account has been successfully created.</p>
-                    </div>
-                </div>
-
-                <div class="step-buttons"
-                    style="display: flex; justify-content: center; margin-top: 30px;">
-                    <button id="prev" disabled>Prev</button>
-                    <button id="next" disabled>Next</button>
-                    <button id="finish"
-                        style="display: none; background: #28a745;">Finish</button>
-                </div>
-
             </div>
         </div>
+    </div>
 
-        <script src="assets/js/main.js"></script>
-    </body>
+    <script src="assets/js/main.js"></script>
+</body>
 </html>

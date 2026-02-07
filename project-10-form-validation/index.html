@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator App</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="left-side">
+                <div class="form-title">
+                    <h1>Hello, friend!</h1>
+                </div>
+                <div class="form-container">
+                    <div class="username-box input-box">
+                        <span><i class="fa-solid fa-user"></i></span>
+                        <input id="username-input" type="text"
+                            placeholder="Username" required>
+                    </div>
+                    <small class="error-msg username-error"
+                        id="username-error">Username cannot
+                        be empty!</small>
+                    <div class="email-box input-box">
+                        <span><i class="fa-solid fa-envelope-open"></i></span>
+                        <input id="email-input" type="email"
+                            placeholder="E-posta" required>
+                    </div>
+                    <div class="password-box input-box">
+                        <span><i class="fa-solid fa-lock"></i></span>
+                        <input id="apssword-input" type="password"
+                            placeholder="Password!" required>
+                    </div>
+                    <div class="password-criteria" id="password-criteria-list">
+                        <div class="criteria" id="length">
+                            <i class="fa-solid fa-circle-xmark"></i> 8+
+                            Characters
+                        </div>
+                        <div class="criteria" id="uppercase">
+                            <i class="fa-solid fa-circle-xmark"></i> Upper Case
+                        </div>
+                        <div class="criteria" id="lowercase">
+                            <i class="fa-solid fa-circle-xmark"></i> Lower Case
+                        </div>
+                        <div class="criteria" id="number">
+                            <i class="fa-solid fa-circle-xmark"></i> Number
+                        </div>
+                    </div>
+                    <div class="password-again-box input-box">
+                        <span><i class="fa-solid fa-lock"></i></span>
+                        <input id="password-input" type="password"
+                            placeholder="Password again!" required>
+                    </div>
+                    <small class="error-msg password-error"
+                        id="password-error">Your password
+                        doesn't match!</small>
+
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="remember-me">
+                        <span class="checkmark"></span>
+                        Remember Me
+                    </label>
+
+                    <button class="signup-btn" id="form-btn">Sign Up</button>
+                </div>
+            </div>
+
+            <div class="right-side">
+                <div class="right-title">
+                    <h1>Welcome, dear user.</h1>
+                </div>
+                <div class="right-text">
+                    <p>Please fill in the required fields to log in.</p>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

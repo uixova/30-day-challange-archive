@@ -668,3 +668,269 @@ header {
     box-shadow: 0 10px 20px rgba(229, 9, 20, 0.3);
 }
 
+.movie-info-panel {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none; 
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.panel-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+}
+
+.panel-content {
+    position: relative;
+    background: linear-gradient(145deg, #1e0b26, #080808);
+    width: 100%;
+    max-width: 900px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    animation: panelFadeIn 0.4s ease-out;
+}
+
+@keyframes panelFadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.close-panel {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.close-panel:hover {
+    background: #e50914;
+    transform: rotate(90deg);
+}
+
+.panel-body {
+    display: flex;
+    gap: 30px;
+}
+
+.panel-left {
+    flex: 0 0 35%;
+}
+
+.panel-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.panel-right {
+    flex: 1;
+    padding: 40px 40px 40px 10px;
+    color: white;
+}
+
+.panel-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.panel-meta {
+    color: #aaa;
+    font-size: 0.9rem;
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.divider { color: #e50914; }
+
+.panel-stats {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-item i { color: #ffc107; font-size: 1.2rem; }
+.stat-item span { font-weight: bold; font-size: 1.1rem; }
+.stat-item small { color: #666; }
+
+.panel-description h3 {
+    font-size: 1.2rem;
+    color: #e50914;
+    margin-bottom: 10px;
+}
+
+.panel-description p {
+    color: #ccc;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.panel-footer {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.watch-btn {
+    background: #e50914;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.share-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    width: 45px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.footer {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 80px 0 30px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: 100px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.footer-brand h2 {
+    color: #e50914;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.footer-brand p {
+    color: #888;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    max-width: 400px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-socials a {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-socials a:hover {
+    background: #e50914;
+    transform: translateY(-5px);
+}
+
+.footer-links h3, .footer-newsletter h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 12px;
+}
+
+.footer-links ul li a {
+    color: #888;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #e50914;
+    padding-left: 5px;
+}
+
+.footer-newsletter p {
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.newsletter-form {
+    display: flex;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.newsletter-form input {
+    background: transparent;
+    border: none;
+    padding: 10px 15px;
+    color: #fff;
+    flex: 1;
+    outline: none;
+}
+
+.newsletter-form button {
+    background: #e50914;
+    color: #fff;
+    border: none;
+    padding: 0 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.newsletter-form button:hover {
+    background: #b20710;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 30px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #555;
+    font-size: 0.85rem;
+}

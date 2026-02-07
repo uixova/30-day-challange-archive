@@ -149,3 +149,128 @@ hr {
     color: #272727;
     text-decoration: none;
 }
+
+@media (max-width: 1024px) {
+    .container {
+        max-width: 500px;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 900px) {
+    .container header h1 {
+        font-size: 32px;
+    }
+    .generate-button .generate-btn {
+        font-size: 20px;
+        max-width: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    .container {
+        min-height: auto;
+        padding: 25px;
+    }
+    .container header h1 {
+        margin-bottom: 30px;
+    }
+    hr {
+        margin-bottom: 30px;
+    }
+    .generated-text-container {
+        padding: 0 10px;
+    }
+    .generate-button {
+        margin: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        border-radius: 20px;
+    }
+    .container header h1 {
+        font-size: 28px;
+    }
+    .text-generated-panel {
+        min-height: 150px;
+        padding: 20px;
+    }
+    .container-footer p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 15px;
+    }
+    .container header h1 {
+        font-size: 24px;
+    }
+    .generate-button {
+        margin: 30px 0;
+    }
+    .generate-button .generate-btn {
+        width: 100%;
+        font-size: 18px;
+        max-width: none;
+    }
+    .copy-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 430px) {
+    .container header h1 {
+        font-size: 22px;
+    }
+    .text-generated-panel {
+        font-size: 14px;
+        padding: 15px;
+    }
+    .container-footer p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 300px) {
+    .container {
+        padding: 15px 10px;
+    }
+    .container header h1 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    hr {
+        margin-bottom: 20px;
+    }
+    .generate-button .generate-btn {
+        font-size: 16px;
+        padding: 12px;
+    }
+    * {
+        word-wrap: break-word;
+    }
+}
+
+@media (max-height: 550px) {
+    body {
+        align-items: flex-start;
+        padding: 10px;
+    }
+    .container {
+        margin: 10px 0;
+        min-height: auto;
+    }
+    .generate-button {
+        margin: 20px 0;
+    }
+}

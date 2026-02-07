@@ -291,3 +291,62 @@ input[type="range"]::-webkit-slider-thumb:hover {
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
+
+@media (max-width: 450px) {
+    .container {
+        width: 90%; 
+        min-width: 280px; 
+        padding: 20px 15px;
+    }
+
+    .generator-box h1 {
+        font-size: 30px; 
+    }
+
+    .password-area {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .password-output {
+        width: 75%; 
+        padding: 0 10px;
+    }
+
+    .password-area .copy-btn {
+        width: 45px;
+    }
+}
+
+@media (max-width: 320px) {
+    .container {
+        width: 95%;
+        padding: 15px 10px;
+    }
+
+    .generator-box h1 {
+        font-size: 26px;
+    }
+
+    .checkboxes {
+        grid-template-columns: 1fr; 
+        gap: 8px;
+    }
+
+    .custom-checkbox {
+        font-size: 13px; 
+    }
+
+    .generate-btn {
+        width: 100%; 
+        font-size: 14px;
+    }
+}
+
+@media (max-height: 500px) {
+    body {
+        align-items: flex-start; 
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}

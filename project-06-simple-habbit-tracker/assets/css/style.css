@@ -168,3 +168,110 @@ header p {
 .actions button:hover {
     transform: scale(1.2);
 }
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px; 
+    }
+
+    .container {
+        padding: 25px 20px; 
+        border-radius: 20px;
+    }
+
+    header h1 {
+        font-size: 1.5rem; 
+    }
+
+    .input-group {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .input-group {
+        flex-direction: row; 
+    }
+
+    .input-group input {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .input-group button {
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+    }
+
+    .habit-item {
+        padding: 12px;
+    }
+
+    .habit-info span {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 430px) {
+    .habit-item {
+        flex-direction: column; 
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .actions {
+        width: 100%;
+        justify-content: flex-end; 
+        border-top: 1px solid #334155;
+        padding-top: 8px;
+    }
+
+    .habit-info {
+        width: 100%;
+    }
+
+    .input-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .input-group button {
+        width: 100%; 
+        height: 40px;
+        border-radius: 10px;
+    }
+
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    header p {
+        font-size: 12px;
+    }
+
+    .habit-list {
+        max-height: 250px;
+    }
+}
+
+@media (max-height: 500px) {
+    body {
+        align-items: flex-start; 
+        padding: 10px;
+    }
+    
+    .container {
+        margin-top: 10px;
+        padding: 20px;
+    }
+
+    .habit-list {
+        max-height: 150px; 
+    }
+}
+
+* {
+    overflow-wrap: break-word; 
+    max-width: 100%;
+}

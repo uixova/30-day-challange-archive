@@ -151,14 +151,15 @@
     }
 
     .movie-search-container {
-        position: absolute;
-        top: 75px;
-        left: 0;
+        position: relative;
         width: 100%;
         margin: 0;
         padding: 10px 20px;
-        background: #080808;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        z-index: -1;
+    }
+
+    #nav-movie-search {
+        width: 100%;
     }
 
     .home-text h1 {
@@ -180,5 +181,108 @@
 
     .pagination {
         gap: 8px;
+    }
+
+    .mobile-side-menu {
+        width: 250px;
+    }
+}
+
+@media (max-width: 380px) {
+    .navbar {
+        padding: 0 10px;
+        height: 70px;
+    }
+
+    .nav-title h1 {
+        font-size: 1rem; 
+    }
+
+    .mobile-side-menu {
+        width: 220px;
+    }
+
+    .contact-wrapper {
+        padding: 20px 15px; 
+        gap: 25px;
+    }
+
+    .contact-info h2 {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    .contact-info p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+
+    .contact-form input, 
+    .contact-form textarea {
+        padding: 12px;
+        font-size: 0.9rem; 
+    }
+
+    .contact-form button {
+        width: 100%;
+        padding: 14px;
+        font-size: 1rem;
+    }
+
+    .footer-content {
+        padding: 30px 15px;
+        gap: 20px;
+    }
+
+    .footer-brand h2 {
+        font-size: 1.3rem;
+    }
+
+    .footer-brand p {
+        font-size: 0.8rem;
+        margin-bottom: 15px;
+    }
+
+    .footer-links h3, 
+    .footer-newsletter h3 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 8px;
+    }
+
+    .footer-links ul li a {
+        font-size: 0.85rem;
+    }
+
+    .footer-newsletter form {
+        display: flex;
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    .footer-newsletter input {
+        width: 100%;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .footer-socials {
+        gap: 15px;
+    }
+
+    .footer-socials a {
+        font-size: 1.2rem; 
+    }
+
+    .home-card-grid, .movie-container {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+
+    .movie-card-title {
+        font-size: 1rem; 
     }
 }

@@ -1,0 +1,184 @@
+@media (max-width: 1024px) {
+    .desktop-menu {
+        gap: 20px;
+    }
+    
+    .home-card-grid, .movie-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+
+    .navbar {
+        padding: 0 30px;
+    }
+
+    .movie-search-container {
+        flex: 0 1 400px;
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        justify-content: flex-start; 
+    }
+
+    .nav-title {
+        margin-right: auto; 
+    }
+
+    #hamburger-toggle {
+        display: block; 
+        margin-right: 15px;
+    }
+
+    .desktop-menu {
+        display: none; 
+    }
+
+    .movie-search-container {
+        flex: 0 1 300px;
+        margin: 0 10px;
+    }
+
+    .home-card-grid, .movie-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .footer-brand {
+        grid-column: span 2;
+        text-align: center;
+    }
+
+    .footer-brand p {
+        margin: 0 auto 20px auto;
+    }
+
+    .footer-socials {
+        justify-content: center;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-title h1 {
+        font-size: 1.5rem;
+    }
+
+    .home-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .ticket-card {
+        flex-direction: column;
+    }
+
+    .ticket-img {
+        width: 100%;
+        height: 250px;
+    }
+
+    .ticket-container {
+        grid-template-columns: 1fr;
+    }
+
+    .panel-body {
+        flex-direction: column;
+    }
+
+    .panel-left {
+        display: none; 
+    }
+
+    .panel-right {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .home-card-grid, .movie-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .movie-search-container {
+        flex: 1;
+        margin: 0 10px;
+    }
+
+    #nav-movie-search {
+        padding: 10px 15px;
+        font-size: 0.85rem;
+    }
+
+    .home-search-bar {
+        flex-direction: column;
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+    .home-search-btn {
+        width: 100%;
+        margin-top: 10px;
+        padding: 12px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-links, .footer-newsletter {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        height: 75px;
+        padding: 0 15px;
+    }
+
+    .nav-title h1 {
+        font-size: 1.2rem;
+    }
+
+    .movie-search-container {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        padding: 10px 20px;
+        background: #080808;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .home-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .tag {
+        font-size: 0.75rem;
+        padding: 5px 10px;
+    }
+
+    .movie-card-title {
+        font-size: 0.9rem;
+    }
+
+    .panel-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .pagination {
+        gap: 8px;
+    }
+}

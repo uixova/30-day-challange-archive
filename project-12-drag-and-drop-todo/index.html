@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Drag & Drop ToDo App</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="left-side">
+                <div class="todos-container">
+                    <div class="todos-title">
+                        <h1>To DO</h1>
+                        <button class="clear-all-btn" id="clear-todos"
+                            title="Clear All Pending"><i
+                                class="fa-solid fa-broom"></i></button>
+                    </div>
+                    <hr>
+                    <div class="todos-list">
+                        <div class="todo" draggable="true">
+                            <div class="pick-up">
+                                <i class="fa-solid fa-grip-vertical"></i>
+                            </div>
+                            <div class="todo-text">
+                                <h3>Reading a book</h3>
+                                <div class="todo-date">
+                                    <span id="todo-time">5:15</span>
+                                    <span id="todo-dates">2/9/2026</span>
+                                </div>
+                            </div>
+                            <div class="todo-buttons">
+                                <button class="true-check"><i
+                                        class="fa-solid fa-check"></i></button>
+                                <button class="false-check"><i
+                                        class="fa-solid fa-xmark"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mid-side">
+                <div class="mid-container">
+                    <div class="welcome-section">
+                        <div class="welcome-text">
+                            <h1>Good morning, <span class="highlight">Dear
+                                    User.</span></h1>
+                            <p>You have <span class="count-tag">5 tasks</span>
+                                to complete today.</p>
+                        </div>
+                    </div>
+
+                    <div class="todo-area">
+                        <div class="todo-area-date">
+                            <span><i class="far fa-calendar-alt"></i>
+                                2/9/2026</span>
+                            <span><i class="far fa-clock"></i> 14:30</span>
+                        </div>
+                        <textarea id="todo-input"
+                            placeholder="Add a new task or jot down an idea..."></textarea>
+
+                        <div class="tape"></div>
+                    </div>
+
+                    <div class="mid-actions">
+                        <div class="mid-top-buttons">
+                            <button class="date-btn"><i
+                                    class="fas fa-calendar-day"></i> Select
+                                Date</button>
+                            <button class="time-btn"><i
+                                    class="fas fa-stopwatch"></i>
+                                Reminder</button>
+                        </div>
+                        <div class="mid-bottom-buttons">
+                            <button class="delete-btn"><i
+                                    class="fas fa-trash-alt"></i> Clear</button>
+                            <button class="save-btn"><i
+                                    class="fas fa-plus-circle"></i> Save
+                                task</button>
+                        </div>
+                    </div>
+
+                    <div class="mid-footer">
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="stat-value">80%</span>
+                                <span class="stat-label">Productivity</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">12</span>
+                                <span class="stat-label">Completed</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">3</span>
+                                <span class="stat-label">Waiting</span>
+                            </div>
+                        </div>
+                        <div class="progress-bar-wrapper">
+                            <div class="progress-bar-fill"
+                                style="width: 70%;"></div>
+                        </div>
+                        <p>TaskMaster Pro v2.0 - Keep focusing!</p>
+                        <p>Design by <a class="designer"
+                                href="https://github.com/uixova">uixova</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-side">
+                <div class="done-todos-container">
+                    <div class="done-todos-title">
+                        <h1>Done</h1>
+                        <button class="clear-all-btn" id="clear-done" title="Clear All Completed"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                    <hr>
+                    <div class="todos-list">
+                        <div class="todo" draggable="true">
+                            <div class="pick-up">
+                                <i class="fa-solid fa-grip-vertical"></i>
+                            </div>
+                            <div class="todo-text">
+                                <h3>Project Finished</h3>
+                                <div class="todo-date">
+                                    <span id="todo-time">18:00</span>
+                                    <span id="todo-dates">2/9/2026</span>
+                                </div>
+                            </div>
+                            <div class="todo-buttons">
+                                <button class="undo-todo"><i
+                                        class="fa-solid fa-rotate-left"></i></button>
+                                <button class="delete-todo"><i
+                                        class="fa-solid fa-trash-can"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dark/Light Mode Form</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+
+        <header>
+            <nav class="navbar">
+                <div class="nav-title">
+                    <h1>DarkNode</h1>
+                </div>
+
+                <ul class="desktop-menu">
+                    <li><a href="#about">Hakkımızda</a></li>
+                    <li><a href="#services">Hizmetler</a></li>
+                    <li>
+                        <input type="checkbox" id="theme-btn">
+                        <label for="theme-btn">
+                            <i class="fa-solid fa-sun sun"></i>
+                            <i class="fa-solid fa-moon moon"></i>
+                        </label>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="auth-section">
+            <div class="container">
+                <form class="contact-form">
+                    <h2>Giriş Yap</h2>
+
+                    <div class="form-group">
+                        <label>Kullanıcı Adı</label>
+                        <input type="text" placeholder="username">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Şifre</label>
+                        <input type="password" placeholder="••••••••">
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Beni Hatırla
+                        </label>
+                        <a href="#" class="forgot-link">Şifremi Unuttum</a>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Oturum Aç</button>
+
+                    <p class="form-footer">Hesabınız yok mu? <a
+                            href="#">Kaydol</a></p>
+                </form>
+            </div>
+        </section>
+
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

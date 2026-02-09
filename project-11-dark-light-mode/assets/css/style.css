@@ -50,7 +50,7 @@ body {
 .desktop-menu {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 22px;
     align-items: center;
 }
 
@@ -232,4 +232,25 @@ input:checked + label i.moon {
     font-size: 0.8rem;
     margin-top: 20px;
     opacity: 0.7;
+}
+
+@media (max-width: 450px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 2%;
+    }
+
+    .nav-title h1 {
+        font-size: 1.3rem;
+    }
+
+    .desktop-menu li:nth-child(3) {
+        width: 30px;
+    }
+
+    input:checked + label:after {
+    left: 3px;
+    background: linear-gradient(180deg, #ffcc89, #d8860b); 
+    }
 }

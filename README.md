@@ -32,11 +32,11 @@ No tutorials copied line by line.
 
 Each folder represents **one full project**:
 
-/project-01-weather-app
-/project-02-password-generator
-/project-03-multi-step-form
+/.01 Weather App
+/.02 Password Generator
+/.03 Multi Step Form
 ...
-/project-30-showcase
+/.30 Final Showcase
 
 Every project includes:
 - `index.html`
@@ -53,7 +53,7 @@ Every project includes:
 3. Multi-Step Form
 4. Notes App  
 5. Quiz Game  
-6. Simple Habit Tracker
+6. Habit Tracker
 7. Random Quote Generator  
 8. Calculator  
 9. Movie Search App  

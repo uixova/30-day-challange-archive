@@ -32,11 +32,11 @@ No tutorials copied line by line.
 
 Each folder represents **one full project**:
 
-/.01 Weather App
-/.02 Password Generator
-/.03 Multi Step Form
+/01- Weather App
+/02- Password Generator
+/03- Multi Step Form
 ...
-/.30 Final Showcase
+/30- Final Showcase
 
 Every project includes:
 - `index.html`

@@ -20,26 +20,7 @@
                                 class="fa-solid fa-broom"></i></button>
                     </div>
                     <hr>
-                    <div class="todos-list">
-                        <div class="todo" draggable="true">
-                            <div class="pick-up">
-                                <i class="fa-solid fa-grip-vertical"></i>
-                            </div>
-                            <div class="todo-text">
-                                <h3>Reading a book</h3>
-                                <div class="todo-date">
-                                    <span id="todo-time">5:15</span>
-                                    <span id="todo-dates">2/9/2026</span>
-                                </div>
-                            </div>
-                            <div class="todo-buttons">
-                                <button class="true-check"><i
-                                        class="fa-solid fa-check"></i></button>
-                                <button class="false-check"><i
-                                        class="fa-solid fa-xmark"></i></button>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="todos-list"></div>
                 </div>
             </div>
 
@@ -69,11 +50,12 @@
                     <div class="mid-actions">
                         <div class="mid-top-buttons">
                             <button class="date-btn"><i
-                                    class="fas fa-calendar-day"></i> Select
-                                Date</button>
-                            <button class="time-btn"><i
-                                    class="fas fa-stopwatch"></i>
-                                Reminder</button>
+                                    class="fas fa-calendar-day"></i> SelectDate
+                            </button>
+                            <button
+                                class="time-btn"><i
+                                    class="fas fa-stopwatch"></i>Reminder
+                            </button>
                         </div>
                         <div class="mid-bottom-buttons">
                             <button class="delete-btn"><i
@@ -114,33 +96,36 @@
                 <div class="done-todos-container">
                     <div class="done-todos-title">
                         <h1>Done</h1>
-                        <button class="clear-all-btn" id="clear-done" title="Clear All Completed"><i class="fa-solid fa-trash"></i></button>
+                        <button class="clear-all-btn" id="clear-done"
+                            title="Clear All Completed"><i
+                                class="fa-solid fa-trash"></i></button>
                     </div>
                     <hr>
-                    <div class="todos-list">
-                        <div class="todo" draggable="true">
-                            <div class="pick-up">
-                                <i class="fa-solid fa-grip-vertical"></i>
-                            </div>
-                            <div class="todo-text">
-                                <h3>Project Finished</h3>
-                                <div class="todo-date">
-                                    <span id="todo-time">18:00</span>
-                                    <span id="todo-dates">2/9/2026</span>
-                                </div>
-                            </div>
-                            <div class="todo-buttons">
-                                <button class="undo-todo"><i
-                                        class="fa-solid fa-rotate-left"></i></button>
-                                <button class="delete-todo"><i
-                                        class="fa-solid fa-trash-can"></i></button>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="todos-list"></div>
                 </div>
             </div>
         </div>
 
+        <div id="custom-picker-modal" class="picker-modal">
+            <div class="picker-content">
+                <h3><i class="fa-solid fa-calendar-check"></i> Select
+                    Deadline</h3>
+                <div class="picker-body">
+                    <div class="input-group">
+                        <label>Date</label>
+                        <input type="date" id="custom-date">
+                    </div>
+                    <div class="input-group">
+                        <label>Time</label>
+                        <input type="time" id="custom-time">
+                    </div>
+                </div>
+                <div class="picker-footer">
+                    <button class="picker-cancel-btn">Cancel</button>
+                    <button class="picker-save-btn">Apply</button>
+                </div>
+            </div>
+        </div>
         <script src="assets/js/main.js"></script>
     </body>
 </html>

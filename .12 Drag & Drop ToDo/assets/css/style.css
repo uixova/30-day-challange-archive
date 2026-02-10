@@ -49,6 +49,12 @@ body {
     padding: 20px;
 }
 
+/* Sürükleme sırasında liste parlaması */
+.drag-over {
+    background: rgba(137, 87, 229, 0.1) !important;
+    border: 2px dashed var(--accent-purple) !important;
+}
+
 .todos-title, .done-todos-title {
     display: grid;
     grid-template-columns: 40px 1fr 40px; 
@@ -102,12 +108,14 @@ hr {
 }
 
 .todos-list {
+    min-height: 200px; /* Boşken bırakabilmek için kritik */
     flex: 1;
-    overflow-y: auto;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    padding-right: 5px;
+    padding: 20px 10px;
+    transition: background 0.3s ease;
 }
 
 .todo {
@@ -119,21 +127,38 @@ hr {
     align-items: center;
     gap: 12px;
     cursor: grab;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease; /* Sürüklerken akıcılık için süreyi kısalttım */
+}
+
+/* Sürüklenen eleman stili */
+.todo.dragging {
+    opacity: 0.5;
+    transform: scale(0.98);
+    background: rgba(137, 87, 229, 0.2);
+    cursor: grabbing;
+}
+
+/* İçerideki öğelerin sürüklemeyi bozmasını engelle */
+.todo.dragging * {
+    pointer-events: none;
+}
+
+.todo-text {
+    flex: 1;
 }
 
 .todo-date {
     display: flex;
     flex-direction: row;
     gap: 30px;
+    font-size: 0.8rem;
+    color: var(--text-dim);
 }
 
 .todo-buttons {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    position: relative;
-    left: 30px;
 }
 
 .todo:hover {
@@ -185,12 +210,6 @@ hr {
     min-height: 250px;
 }
 
-.todo-area-date {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-}
-
 #todo-input {
     width: 100%;
     height: 180px;
@@ -232,6 +251,65 @@ hr {
     max-width: 500px;
     margin: 0 auto;
 }
+
+.picker-modal {
+    display: none; 
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.picker-content {
+    background: var(--card-bg);
+    border: 1px solid var(--accent-purple);
+    padding: 30px;
+    border-radius: 20px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(137, 87, 229, 0.3);
+}
+
+.picker-body {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 5px;
+}
+
+.input-group label {
+    font-size: 0.8rem;
+    color: var(--accent-purple);
+    font-weight: 600;
+}
+
+.input-group input {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.picker-footer {
+    display: flex;
+    gap: 10px;
+}
+
+.picker-save-btn { background: var(--accent-purple); color: white; }
+.picker-cancel-btn { background: rgba(255, 255, 255, 0.1); color: white; }
 
 button {
     flex: 1;
@@ -311,23 +389,7 @@ button:hover {
 .progress-bar-fill {
     height: 100%;
     background: linear-gradient(90deg, var(--accent-purple), var(--accent-green));
-}
-
-.mid-footer p {
-    font-size: 0.7rem;
-    opacity: 0.5;
-}
-
-.designer {
-    text-decoration: none;
-    color: var(--accent-purple); 
-    transition: 0.3s;
-    font-weight: 600;
-}
-
-.designer:hover {
-    text-shadow: 0 0 8px var(--accent-purple);
-    color: var(--text-main);
+    transition: width 0.4s ease;
 }
 
 .todo.priority-high {
@@ -342,4 +404,28 @@ button:hover {
 
 .todo.priority-low {
     border-left: 5px solid var(--accent-green) !important;
+}
+
+.todo.expired {
+    border: 1px solid var(--accent-red) !important;
+    box-shadow: 0 0 20px rgba(218, 54, 51, 0.6) !important;
+    animation: pulse-red 2s infinite;
+}
+
+.todo.urgent {
+    border: 1px solid var(--accent-yellow) !important;
+    box-shadow: 0 0 15px rgba(253, 253, 150, 0.4) !important;
+}
+
+@keyframes pulse-red {
+    0% { box-shadow: 0 0 5px rgba(218, 54, 51, 0.4); }
+    50% { box-shadow: 0 0 20px rgba(218, 54, 51, 0.8); }
+    100% { box-shadow: 0 0 5px rgba(218, 54, 51, 0.4); }
+}
+
+.right-side .todo {
+    box-shadow: none !important;
+    border: 1px solid var(--glass-border) !important;
+    animation: none !important;
+    opacity: 0.7;
 }

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clock & Alarm</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="left-side">
+                <div class="alarm-container">
+                    <div class="alarm-header">
+                        <div class="alarm-title">
+                            <h1><i class="fa-solid fa-bell"></i> Alarm</h1>
+                        </div>
+                        <button class="delete-all"><i
+                                class="fa-solid fa-trash"></i></button>
+                    </div>
+                    <div class="alarm-list">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-side">
+                <div class="top-container">
+                    <div class="clock-container">
+                        <div class="clock-timer">
+                            <span id="clock">18:22:15</span>
+                        </div>
+                    </div>
+                    <div class="date-container">
+                        <span id="date">11 February 2026</span>
+                        <span id="today">Wednesday</span>
+                    </div>
+                </div>
+                <div class="add-alarm">
+                    <div class="select-time">
+                        <input type="time" id="hm-select">
+                    </div>
+                    <div class="alarm-tag-area">
+                        <input type="text" id="add-tag"
+                            placeholder="Add alarm tag...">
+                    </div>
+                    <div class="add-button">
+                        <button class="alarm-add-btn"><i
+                                class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+
+                <div class="designer-footer">
+                    <h1>Design by <a
+                            href="https://github.com/uixova">uixova</a></h1>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="alarm-screen" class="alarm-overlay">
+            <div class="alarm-popup">
+                <div class="ring-icon"><i
+                        class="fa-solid fa-bell fa-shake"></i></div>
+                <h2 id="ringing-tag">Wake Up!</h2>
+                <p id="ringing-time">00:00</p>
+                <button id="stop-alarm-btn">STOP ALARM</button>
+            </div>
+        </div>
+
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <div class="history-container">
+        <div class="panel-header">
+            <i class="fas fa-history"></i>
+            <h1>History</h1>
+        </div>
+        <div class="score-name-labels">
+            <span>YOU</span>
+            <span>BOT</span>
+        </div>
+        <div class="history-list"></div>
+    </div>
+
+    <div class="container">
+        <div class="result-field">
+            <div class="result-images">
+                <div class="user-box">
+                    <h3>You</h3>
+                    <span class="user-result">
+                        <img src="assets/images/rock.png" />
+                    </span>
+                </div>
+                <div class="bot-box">
+                    <h3>Bot</h3>
+                    <span class="bot-result">
+                        <img src="assets/images/rock.png" />
+                    </span>
+                </div>
+            </div>
+            <div class="result">Let's Play!</div>
+        </div>
+        <div class="option-images">
+            <span class="option-image">
+                <img src="assets/images/rock.png" />
+                <p>Rock</p>
+            </span>
+            <span class="option-image">
+                <img src="assets/images/paper.png" />
+                <p>Paper</p>
+            </span>
+            <span class="option-image">
+                <img src="assets/images/scissors.png" />
+                <p>Scissors</p>
+            </span>
+        </div>
+    </div>
+
+    <div class="score-container">
+        <div class="panel-header">
+            <i class="fas fa-trophy"></i>
+            <h1>Score</h1>
+        </div>
+        <div class="current-score-card">
+            <div class="score-block user">
+                <span class="label">YOU</span>
+                <span class="you-score"></span>
+            </div>
+            <div class="score-vs">VS</div>
+            <div class="score-block bot">
+                <span class="label">BOT</span>
+                <span class="bot-score"></span>
+            </div>
+        </div>
+        <div class="score-footer">
+            <p>Current Match</p>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -22,6 +22,7 @@ body {
     justify-content: space-between;
     flex-direction: row;
     gap: 80px;
+    width: 60%;
 }
 
 .left-side {

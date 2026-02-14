@@ -117,5 +117,5 @@ Feel free to explore, learn, or get inspired.
 
 ## 👤 Author
 
-**Salih Öksüz**  
+**uixova**  
 📁 30 Days – 30 Projects Challenge

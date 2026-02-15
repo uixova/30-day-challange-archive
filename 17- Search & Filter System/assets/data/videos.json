@@ -1,0 +1,39 @@
+[
+    {
+        "id": 1,
+        "title": "Unlock Creative Possibilities: Free Design Resources for You!",
+        "category": "coding",
+        "videoUrl": "assets/videos/coding.mp4",
+        "date": "2026-05-12",
+        "timeAgo": "2 days ago",
+        "description": "Who doesn't love getting stuff for free, am I right?! Well, today I've got some awesome news for all you designers, developers, and YouTube creators out there. I've got ten super helpful resources that are gonna make your workflow a whole lot easier, and the best part? They're all online, and totally free for you to use!"
+                
+    },
+    {
+        "id": 2,
+        "title": "[UE5] Boss Fight Prototype - Fighter Arena",
+        "category": "gaming",
+        "videoUrl": "assets/videos/gaming.mp4",
+        "date": "2026-03-15",
+        "timeAgo": "5 hours ago",
+        "description": "It's an arena game where you will face tough opponents and you will level up with each victory." 
+    },
+    {
+        "id": 3,
+        "title": "Lo-Fi Hip Hop Mix - Study & Chill 2026",
+        "category": "music",
+        "videoUrl": "assets/videos/music.mp4",
+        "date": "2026-02-08",
+        "timeAgo": "1 week ago",
+        "description": "The perfect companion for your long coding or study sessions."
+    },
+    {
+        "id": 4,
+        "title": "Top 10Places to Visit in Rome",
+        "category": "entertainment",
+        "videoUrl": "assets/videos/vlog.mp4",
+        "date": "2025-11-15",
+        "timeAgo": "3 months ago",
+        "description": "Explore the unseen beauty of Rome with our latest travel vlog."
+    }
+]

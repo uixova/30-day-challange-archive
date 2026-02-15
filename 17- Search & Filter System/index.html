@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>video Search & Filter</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+
+        <header>
+            <nav class="navbar">
+                <div class="search-container">
+                    <input type="text" class="search-bar"
+                        placeholder="Search...">
+                    <div class="search-ico">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+                <div class="search-filter">
+                    <button class="filter-btn">Filter <i
+                            class="fa-solid fa-filter"></i></button>
+                </div>
+            </nav>
+        </header>
+
+        <div id="filter-model" class="filter-model">
+            <div class="model-content">
+                <div class="model-header">
+                    <h3>Filtrele</h3>
+                    <span class="close-model">&times;</span>
+                </div>
+
+                <div class="model-body">
+                    <div class="filter-group">
+                        <h4>Category</h4>
+                        <div class="checkbox-list">
+                            <label><input type="checkbox"
+                                    class="category-filter" value="music">
+                                Music</label>
+                            <label><input type="checkbox"
+                                    class="category-filter" value="gaming">
+                                Game</label>
+                            <label><input type="checkbox"
+                                    class="category-filter" value="coding">
+                                Coding</label>
+                            <label><input type="checkbox"
+                                    class="category-filter"
+                                    value="entertainment"> Entertainment</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Ranking</h4>
+                        <select id="sort-select">
+                            <option value="default">Default</option>
+                            <option value="alphabetical">From A to Z</option>
+                            <option value="newest">Newest</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="model-footer">
+                    <button id="clear-filters" class="clear-btn">Clear</button>
+                    <button id="apply-filters" class="apply-btn">Apply</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="video-container"></div>
+
+        <div id="video-player-model" class="video-player-model">
+            <div class="player-container">
+
+                <div class="player-nav">
+                    <button class="back-to-home" id="back-home-btn">
+                        <i class="fa-solid fa-house"></i> Home
+                    </button>
+                </div>
+
+                <div class="player-content">
+                    <div class="video-display">
+                        <video id="main-video" controls autoplay src></video>
+                    </div>
+
+                    <div class="video-details">
+                        <h2 id="player-title">Video Title</h2>
+
+                        <div class="description-panel">
+                            <div class="description-header" id="desc-toggle">
+                                <span>Description</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="description-body" id="desc-body">
+                                <p id="player-description">This video description from JSON It has been constructed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

@@ -51,12 +51,12 @@ signupForm.addEventListener("submit", (e) => {
     signMatchError.innerText = '';
 
     if (users.some(u => u.username === signUser.value)) {
-        showBanner("Bu kullanıcı adı zaten alınmış aga!");
+        showBanner("This username is already taken!");
         return;
     }
 
     if (signPass.value !== confirmPass.value) {
-        showBanner("Şifreler uyuşmuyor!");
+        showBanner("Passwords don't match!");
         return;
     }
 
@@ -71,7 +71,7 @@ signupForm.addEventListener("submit", (e) => {
     users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));
 
-    showBanner("Kayıt başarılı kanka! Giriş yapabilirsin.", true);
+    showBanner("Registration is successful, buddy! You can log in.", true);
     signupForm.reset();
     toggleForm('login');
 });
@@ -83,10 +83,10 @@ loginForm.addEventListener("submit", (e) => {
     const userFound = users.find(u => u.username === logUser.value && u.pass === logPass.value);
 
     if (userFound) {
-        showBanner(`Hoş geldin ${userFound.name}! Giriş başarılı.`, true);
+        showBanner(`Welcome ${userFound.name}! Login is successful.`, true);
         loginForm.reset();
     } else {
-        showBanner("Kullanıcı adı veya şifre hatalı!");
+        showBanner("Username or password is incorrect!");
     }
 });
 
@@ -103,24 +103,24 @@ resetForm.addEventListener("submit", (e) => {
     const userIndex = users.findIndex(u => u.username === resetUser && u.pass === currentPass);
 
     if (userIndex === -1) {
-        showBanner("Kullanıcı adı veya mevcut şifre hatalı!");
+        showBanner("Username or current password is incorrect!");
         return;
     };
 
     if (newPass !== confirmNewPass) {
-        showBanner("Yeni şifreler uyuşmuyor!");
+        showBanner("New passwords don't match!");
         return;
     };
 
     if (currentPass === newPass) {
-        showBanner("Yeni şifre eskisinden farklı olmalı!");
+        showBanner("The new password should be different from the old one!");
         return;
     }
 
     users[userIndex].pass = newPass;
     localStorage.setItem("users", JSON.stringify(users));
 
-    showBanner("Şifren güncellendi kanka!", true);
+    showBanner("Your password has been updated!", true);
     resetForm.reset();
     toggleForm('login');
 });

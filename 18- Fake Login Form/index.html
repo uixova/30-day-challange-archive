@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fake Login Form</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="form-box" id="loginBox">
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <div class="login-group">
+                        <div class="input-data">
+                            <input type="text" id="logUser" placeholder=" "
+                                required>
+                            <div class="underline"></div>
+                            <label>Username</label>
+                        </div>
+                        <span class="error-msg" id="logUserError"></span>
+                    </div>
+
+                    <div class="login-group">
+                        <div class="input-data">
+                            <input type="password" id="logPass" placeholder=" "
+                                required>
+                            <div class="underline"></div>
+                            <label>Password</label>
+                        </div>
+                        <span class="error-msg" id="logPassError"></span>
+                    </div>
+
+                    <div class="forget">
+                        <label><input type="checkbox"> Remember Me</label>
+                        <a href="#" onclick="toggleForm('reset')">Forgot
+                            Password?</a>
+                    </div>
+
+                    <button type="submit" class="btn">Login</button>
+
+                    <div class="switch-form">
+                        <p>Don't have an account? <a href="#"
+                                onclick="toggleForm('signup')">Signup</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <div class="form-box" id="signupBox" style="display: none;">
+                <h2>Signup</h2>
+                <form id="signupForm">
+                    <div class="input-row">
+                        <div class="signup-group">
+                            <div class="input-data">
+                                <input type="text" id="signName" placeholder=" "
+                                    required>
+                                <div class="underline"></div>
+                                <label>Name</label>
+                            </div>
+                        </div>
+                        <div class="signup-group">
+                            <div class="input-data">
+                                <input type="text" id="signSurname"
+                                    placeholder=" " required>
+                                <div class="underline"></div>
+                                <label>Surname</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="signup-group">
+                        <div class="input-data">
+                            <input type="text" id="signUser" placeholder=" "
+                                required>
+                            <div class="underline"></div>
+                            <label>Username</label>
+                        </div>
+                        <span class="error-msg" id="signUserError"></span>
+                    </div>
+                    <div class="signup-group">
+                        <div class="input-data">
+                            <input type="email" id="signEmail" placeholder=" "
+                                required>
+                            <div class="underline"></div>
+                            <label>Email Address</label>
+                        </div>
+                    </div>
+                    <div class="signup-group">
+                        <div class="input-data">
+                            <input type="password" id="signPass" placeholder=" "
+                                required>
+                            <div class="underline"></div>
+                            <label>Password</label>
+                        </div>
+                    </div>
+                    <div class="signup-group">
+                        <div class="input-data">
+                            <input type="password" id="confirmPass"
+                                placeholder=" " required>
+                            <div class="underline"></div>
+                            <label>Confirm Password</label>
+                        </div>
+                        <span class="error-msg" id="signMatchError"></span>
+                    </div>
+                    <button type="submit" class="btn" id="createBtn">Create
+                        Account</button>
+                    <div class="switch-form">
+                        <p>Already have an account? <a href="#"
+                                onclick="toggleForm('login')">Login</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <div class="form-box" id="resetBox" style="display: none;">
+                <h2>Reset Password</h2>
+                <form id="resetForm">
+                    <div class="reset-group">
+                        <div class="input-data">
+                            <input type="text" id="resetUser" placeholder=" "
+                                required>
+                            <div class="underline"></div>
+                            <label>Username</label>
+                        </div>
+                        <span class="error-msg" id="resetUserError"></span>
+                    </div>
+
+                    <div class="reset-group">
+                        <div class="input-data">
+                            <input type="password" id="currentPass"
+                                placeholder=" " required>
+                            <div class="underline"></div>
+                            <label>Current Password</label>
+                        </div>
+                        <span class="error-msg" id="currentPassError"></span>
+                    </div>
+
+                    <div class="reset-group">
+                        <div class="input-data">
+                            <input type="password" id="newPass" placeholder=" "
+                                required>
+                            <div class="underline"></div>
+                            <label>New Password</label>
+                        </div>
+                    </div>
+
+                    <div class="reset-group">
+                        <div class="input-data">
+                            <input type="password" id="confirmNewPass"
+                                placeholder=" " required>
+                            <div class="underline"></div>
+                            <label>Confirm New Password</label>
+                        </div>
+                        <span class="error-msg" id="newPassMatchError"></span>
+                    </div>
+
+                    <button type="submit" class="btn">Update Password</button>
+
+                    <div class="switch-form">
+                        <p>Back to <a href="#"
+                                onclick="toggleForm('login')">Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="InfoBanner" style="display: none;">
+            <span class="reversed reversedRight">
+                <span>
+                    &#9888;
+                </span>
+            </span>
+            <span class="reversed reversedLeft">
+                Warning i'm an evil error message !!
+            </span>
+        </div>
+
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

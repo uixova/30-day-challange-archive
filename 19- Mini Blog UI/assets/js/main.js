@@ -162,7 +162,7 @@ function saveBlog() {
     const text = textInput.value.trim();
 
     if (!title || !text) {
-        alert("Aga boş bırakma buraları!");
+        showModernAlert("Missing Information!", "Leaving Content Blank!", "warning");
         return;
     }
 
@@ -178,18 +178,29 @@ function saveBlog() {
         date: new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
     };
 
-    let userBlogs = JSON.parse(localStorage.getItem("blogs") || "[]");
+    const userBlogs = JSON.parse(localStorage.getItem("blogs")) || [];
     userBlogs.unshift(newBlog);
     localStorage.setItem("blogs", JSON.stringify(userBlogs));
 
     allBlogs = [...userBlogs, ...systemBlogs];
-    currentPage = 1; 
-    applyFilters();
 
+    if(searchInput) searchInput.value = "";
+
+    const firstSortRadio = document.querySelector('input[name="sort"]');
+    if (firstSortRadio) firstSortRadio.checked = true;
+
+    const allCheckboxes = document.querySelectorAll('.checkbox-group input[type="checkbox"]');
+    allCheckboxes.forEach(cb => cb.checked = false);
+
+    currentPage = 1; 
+    applyFilters(); 
+    
     titleInput.value = "";
     textInput.value = "";
     if(publishBtn) publishBtn.disabled = false; 
-    closeModel('add-blog-model'); 
+    closeModel('add-blog-model');
+
+    showModernAlert("Great!", "Your blog post has been successfully shared!", "success");
 }
 
 searchInput.addEventListener("input", (e) => {
@@ -229,5 +240,28 @@ function applyFilters() {
 document.querySelectorAll('input[name="sort"], .checkbox-group input').forEach(input => {
     input.addEventListener('change', applyFilters);
 });
+
+// warning or success
+function showModernAlert(title, message, type = 'warning') {
+    const alertModal = document.getElementById("custom-alert");
+    const iconBox = document.getElementById("alert-icon");
+    const titleBox = document.getElementById("alert-title");
+    const messageBox = document.getElementById("alert-message");
+
+    if (type === 'success') {
+        iconBox.innerHTML = '<i class="fa-solid fa-circle-check" style="color: #10b981;"></i>';
+    } else {
+        iconBox.innerHTML = '<i class="fa-solid fa-triangle-exclamation" style="color: #f59e0b;"></i>';
+    }
+
+    titleBox.innerText = title;
+    messageBox.innerText = message;
+    
+    alertModal.style.display = "flex";
+
+    setTimeout(() => {
+        alertModal.style.display = "none";
+    }, 1500);
+}
 
 initApp();

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mini Blog UI</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+
+        <div class="main-container">
+            <div class="header-section">
+                <div class="logo-area">
+                    <h1>Dev<span>Blog</span></h1>
+                </div>
+                <div class="nav-controls">
+                    <div class="search-bar">
+                        <input type="text" id="searchInput" placeholder="Search posts...">
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                    <button class="add-post-btn" onclick="openModel('add-blog-model')">
+                        <i class="fa-solid fa-pen-nib"></i> New Post
+                    </button>
+                </div>
+            </div>
+
+            <div class="layout-wrapper">
+                <div class="sidebar-area">
+                    <div class="filter-box">
+                        <h3>Sort By</h3>
+                        <div class="options-group">
+                            <label class="radio-label"><input type="radio" name="sort" checked> Newest</label>
+                            <label class="radio-label"><input type="radio" name="sort"> Oldest</label>
+                            <label class="radio-label"><input type="radio" name="sort"> Popular</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-box">
+                        <h3>Categories</h3>
+                        <div class="checkbox-group">
+                            <label class="check-label"><input type="checkbox"> Software</label>
+                            <label class="check-label"><input type="checkbox"> Tech</label>
+                            <label class="check-label"><input type="checkbox"> Design</label>
+                            <label class="check-label"><input type="checkbox"> AI</label>
+                            <label class="check-label"><input type="checkbox"> Frontend</label>
+                            <label class="check-label"><input type="checkbox"> Backend</label>
+                            <label class="check-label"><input type="checkbox"> Mobile</label>
+                            <label class="check-label"><input type="checkbox"> Cybersecurity</label>
+                            <label class="check-label"><input type="checkbox"> Cloud</label>
+                            <label class="check-label"><input type="checkbox"> Web3</label>
+                            <label class="check-label"><input type="checkbox"> Game Dev</label>
+                            <label class="check-label"><input type="checkbox"> Tutorials</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-area">
+                    <div class="blog-grid" id="blogCards"></div>
+
+                    <div class="pagination-container">
+                        <button disabled><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="page-link active">1</button>
+                        <button class="page-link">2</button>
+                        <button class="page-link"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>Developed by <a href="https://github.com/uixova">UIXova</a> © 2026</p>
+            </div>
+        </div>
+
+        <div id="add-blog-model" class="model-overlay">
+            <div class="model-inner">
+                <div class="model-top">
+                    <h2>New Content</h2>
+                    <span class="close-icon" onclick="closeModel('add-blog-model')">&times;</span>
+                </div>
+                <div class="model-middle">
+                    <div class="input-row">
+                        <label>Title</label>
+                        <input type="text" id="blogTitle" placeholder="Enter post title...">
+                    </div>
+                    <div class="input-row">
+                        <label>Category</label>
+                        <select id="blogCategory">
+                            <option value="Software">Software</option>
+                            <option value="Tech">Tech</option>
+                            <option value="Design">Design</option>
+                        </select>
+                    </div>
+                    <div class="upload-dummy">
+                        <i class="fa-solid fa-image"></i>
+                        <p>Image Upload (Disabled)</p>
+                    </div>
+                    <div class="input-row">
+                        <label>Content</label>
+                        <textarea id="blogText" placeholder="Write content..."></textarea>
+                    </div>
+                </div>
+                <div class="model-bottom">
+                    <button class="cancel-btn" onclick="closeModel('add-blog-model')">Cancel</button>
+                    <button class="publish-btn" onclick="saveBlog()">Publish Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="view-blog-model" class="model-overlay">
+            <div class="model-inner view-mode">
+                <span class="close-icon" onclick="closeModel('view-blog-model')">&times;</span>
+                <div id="view-inner" class="view-content-wrapper">
+                    </div>
+            </div>
+        </div>
+
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+[
+    {
+        "id": "sys_1",
+        "title": "JavaScript ES2026 Features",
+        "category": "Software",
+        "text": "The upcoming ECMAScript 2026 standards bring revolutionary changes to asynchronous programming and memory management. Developers are particularly excited about the new 'Safe-Operator' which prevents null pointer exceptions at the engine level.",
+        "img": "https://picsum.photos/400/250?random=1",
+        "date": "17 Feb 2026"
+    },
+    {
+        "id": "sys_2",
+        "title": "The Rise of Quantum AI",
+        "category": "AI",
+        "text": "Quantum computing is no longer a dream. In 2026, we're seeing the first practical applications of quantum-enhanced machine learning models that can process data 1000x faster than traditional GPUs.",
+        "img": "https://picsum.photos/400/250?random=2",
+        "date": "18 Feb 2026"
+    },
+    {
+        "id": "sys_3",
+        "title": "Modern UI Design Trends",
+        "category": "Design",
+        "text": "Bento grids and glassmorphism are evolving. This year, 'Bio-minimalism' is taking over, focusing on organic shapes and high-contrast accessibility that mimics natural light patterns.",
+        "img": "https://picsum.photos/400/250?random=3",
+        "date": "19 Feb 2026"
+    },
+    {
+        "id": "sys_4",
+        "title": "Cybersecurity in 2026",
+        "category": "Cybersecurity",
+        "text": "With the increase in decentralized web applications, zero-trust architecture has become the industry standard. This article explores how to protect user data in the age of persistent digital threats.",
+        "img": "https://picsum.photos/400/250?random=4",
+        "date": "20 Feb 2026"
+    }
+]

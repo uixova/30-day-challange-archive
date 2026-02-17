@@ -27,6 +27,12 @@ async function initApp() {
     }
 }
 
+function escapeHTML(str) {
+    const p = document.createElement("p");
+    p.textContent = str;
+    return p.innerHTML;
+}
+
 function renderBlogs(data) {
     blogCards.innerHTML = "";
     const container = document.querySelector(".pagination-container");
@@ -165,9 +171,9 @@ function saveBlog() {
 
     const newBlog = {
         id: "user_" + Date.now(),
-        title: title,
+        title: escapeHTML(title),
         category: categoryInput.value,
-        text: text,
+        text: escapeHTML(text),
         img: 'https://picsum.photos/400/250?random=' + Math.floor(Math.random() * 1000),
         date: new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
     };

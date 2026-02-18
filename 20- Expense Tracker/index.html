@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Expense Tracker Pro</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+
+        <div class="main-container">
+            <div class="header-section">
+                <div class="input-row-group">
+                    <select id="transactionType" class="type-select">
+                        <option value="expense">Expense (-)</option>
+                        <option value="income">Income (+)</option>
+                    </select>
+                    <input type="text" id="expenseTitle"
+                        placeholder="Description (e.g. Salary, Rent...)">
+                    <input type="number" id="expenseAmount"
+                        placeholder="Amount ($)">
+                    <select id="expenseCategory">
+                        <option value="Software">Software</option>
+                        <option value="Food">Food</option>
+                        <option value="Salary">Salary</option>
+                        <option value="AI">AI</option>
+                        <option value="Health">Health</option>
+                    </select>
+                    <button class="add-post-btn" onclick="addNewTransaction()">
+                        <i class="fa-solid fa-plus"></i> Add
+                    </button>
+                </div>
+            </div>
+
+            <div class="layout-wrapper">
+                <div class="sidebar-area">
+                    <div class="filter-box">
+                        <h3>History</h3>
+                        <div class="date-list-wrapper" id="dateHistoryList"></div>
+                    </div>
+                </div>
+
+                <div class="content-area">
+                    <div class="view-content-wrapper">
+                        <div class="content-header">
+                            <h2 id="selectedDateLabel">17 Feb 2026</h2>
+                        </div>
+
+                        <div class="expense-scroll-box" id="expenseCards">
+                            <div class="expense-item-card">
+                                <div class="item-info">
+                                    <span class="category-tag">Salary</span>
+                                    <p>Freelance Project</p>
+                                </div>
+                                <div class="item-right">
+                                    <span
+                                        class="item-value positive">+$1,200.00</span>
+                                    <button class="delete-btn"
+                                        onclick="this.parentElement.parentElement.remove()"><i
+                                            class="fa-solid fa-trash-can"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="daily-stats-row">
+                            <div class="stat-group">
+                                <span>Daily Income: <strong
+                                        class="income-val">$1,200.00</strong></span>
+                                <span>Daily Expense: <strong
+                                        class="expense-val">$0.00</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom-panel">
+                <div class="summary-card">
+                    <span class="label">Total Income</span>
+                    <p class="value income-val">$5,250.00</p>
+                </div>
+                <div class="summary-card">
+                    <span class="label">Total Expense</span>
+                    <p class="value expense-val">$1,120.00</p>
+                </div>
+                <div class="summary-card">
+                    <span class="label">Net Balance</span>
+                    <p class="value balance-val">$4,130.00</p>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

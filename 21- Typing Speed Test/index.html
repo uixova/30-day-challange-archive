@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Typing Speed Test</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="left-side">
+                <div class="logo">
+                    <i class="fa-solid fa-bolt"></i>
+                    <span>FASTYPE</span>
+                </div>
+                <div class="option-list">
+                    <label>Test Duration</label>
+                    <select id="timeSelect">
+                        <option value="15">15 Seconds</option>
+                        <option value="30" selected>30 Seconds</option>
+                        <option value="60">60 Seconds</option>
+                    </select>
+                </div>
+                <button class="start-btn" id="startTest">
+                    <i class="fa-solid fa-rotate-right"></i> Restart
+                </button>
+            </div>
+
+            <div class="right-side">
+                <div class="stats-bar">
+                    <div class="stat-item">
+                        <span id="timerDisplay">30</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="label">wpm</span>
+                        <span id="wpmDisplay">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="label">Error</span>
+                        <span id="mistakeDisplay">0</span>
+                    </div>
+                </div>
+
+                <div class="text-display" id="textDisplay">
+                </div>
+
+                <input type="text" id="hiddenInput" autofocus
+                    autocomplete="off">
+            </div>
+        </div>
+
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

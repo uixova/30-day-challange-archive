@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body {
+    background-color: #323437;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #d1d0c5;
+}
+
+.container {
+    display: flex;
+    width: 1100px;
+    gap: 50px;
+    padding: 40px;
+    background: rgba(44, 46, 49, 0.5);
+    border-radius: 24px;
+}
+
+.left-side {
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    border-right: 1px solid #444;
+    padding-right: 30px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #e2b714;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+select {
+    width: 100%;
+    background: #2c2e31;
+    border: 1px solid #444;
+    color: #d1d0c5;
+    padding: 12px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.start-btn {
+    background: #e2b714;
+    color: #323437;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.start-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(226, 183, 20, 0.3);
+}
+
+.right-side {
+    flex: 2.5;
+    position: relative;
+}
+
+.stats-bar {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 25px;
+    align-items: flex-end;
+}
+
+#timerDisplay {
+    font-size: 3.5rem;
+    color: #e2b714;
+    line-height: 1;
+}
+
+.stat-item .label {
+    color: #646669;
+    font-size: 0.8rem;
+    display: block;
+}
+
+.stat-item span:not(.label) {
+    font-size: 1.8rem;
+    color: #d1d0c5;
+}
+
+.text-display {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    height: 160px;
+    overflow: hidden;
+    color: #646669;
+    word-wrap: break-word;
+    position: relative;
+    padding: 10px;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.char {
+    position: relative;
+    transition: 0.1s;
+}
+
+.char.correct {
+    color: #d1d0c5;
+}
+
+.char.incorrect {
+    color: #ca4754;
+    background: rgba(202, 71, 84, 0.2);
+    border-radius: 2px;
+}
+
+.char.current {
+    color: #e2b714;
+    text-decoration: underline;
+}
+
+.char.current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 2px;
+    height: 1.2em;
+    background: #e2b714;
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+#hiddenInput {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}

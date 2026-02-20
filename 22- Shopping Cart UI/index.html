@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Modern Shopping UI</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="left-side">
+                <div class="logo">
+                    <i class="fa-solid fa-bolt"></i>
+                    <span>FASTSHOP</span>
+                </div>
+
+                <div class="option-list">
+                    <label>Categories</label>
+                    <select id="categorySelect">
+                        <option value="all">All Products</option>
+                        <option value="tech">Electronics</option>
+                        <option value="shoes">Shoes</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Price Range ($)</label>
+                    <div class="range-container">
+                        <input type="range" min="0" max="5000" step="100"
+                            id="priceRange" value="2500">
+                        <div class="range-values">
+                            <span>$0</span>
+                            <span id="rangeValue">$2500</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="start-btn" id="checkoutBtn">
+                    <i class="fa-solid fa-cart-check"></i> Complete Order
+                </button>
+            </div>
+
+            <div class="right-side">
+                <div class="stats-bar">
+                    <div class="stat-item">
+                        <span class="label">Cart</span>
+                        <span id="itemCountDisplay">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="label">Total</span>
+                        <span id="totalPriceDisplay">0</span>₺
+                    </div>
+                    <div class="stat-item">
+                        <span class="label">Discount</span>
+                        <span id="discountDisplay">0</span>
+                    </div>
+                </div>
+
+                <div class="text-display" id="productGrid">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="assets/images/airpods.png" alt="Product">
+                        </div>
+                        <div class="product-info">
+                            <h4>Apple AirPods</h4>
+                            <p class="price">$199</p>
+                            <button class="add-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="assets/images/nikeAir.png" alt="Product">
+                        </div>
+                        <div class="product-info">
+                            <h4>Nike Air Force</h4>
+                            <p class="price">$499</p>
+                            <button class="add-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="assets/images/razerMouse.png"
+                                alt="Product">
+                        </div>
+                        <div class="product-info">
+                            <h4>Razer Mouse</h4>
+                            <p class="price">$999</p>
+                            <button class="add-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="assets/images/mackbook.png" alt="Product">
+                        </div>
+                        <div class="product-info">
+                            <h4>Macbook Pro</h4>
+                            <p class="price">$1299</p>
+                            <button class="add-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="assets/images/camera.png" alt="Product">
+                        </div>
+                        <div class="product-info">
+                            <h4>Sony Camera</h4>
+                            <p class="price">$650</p>
+                            <button class="add-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="assets/images/keyboard.png" alt="Product">
+                        </div>
+                        <div class="product-info">
+                            <h4>Gaming Keyboard</h4>
+                            <p class="price">$225</p>
+                            <button class="add-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <input type="text" id="hiddenInput"
+                    placeholder="Type the product you want to search for..."
+                    autocomplete="off">
+            </div>
+        </div>
+
+        <div id="cartModal" class="modal-overlay">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3><i class="fa-solid fa-basket-shopping"></i> My
+                        Basket</h3>
+                    <button id="closeModal" class="close-btn">&times;</button>
+                </div>
+                <div class="modal-body" id="cartItemsList">
+                    <p class="empty-msg">Your basket is empty.</p>
+                </div>
+                <div class="modal-footer">
+                    <div class="modal-total">
+                        <span>Total:</span>
+                        <span id="modalTotalValue">$0</span>
+                    </div>
+                    <button class="confirm-btn" id="finalConfirmBtn">Complete
+                        Payment</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

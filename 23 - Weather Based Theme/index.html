@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather Based Theme</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="top-wrapper">
+                <div class="app-title"><h1>PureSky</h1></div>
+                <div class="city-input">
+                    <input type="text" id="searchCity"
+                        placeholder="Şehir ismini giriniz...">
+                    <button id="searchBtn">Ara</button>
+                </div>
+            </div>
+
+            <div class="bottom-wrapper">
+                <div class="instant-weather">
+                    <div class="date-location">
+                        <h2 id="cityName">Şehir Bekleniyor...</h2>
+                        <p id="currentDate">-- --</p>
+                    </div>
+                    <div class="instant-main">
+                        <div class="temp-section">
+                            <span id="mainTemp" class="main-temp">--°C</span>
+                            <span id="description" class="description">--</span>
+                        </div>
+                        <img id="mainIcon" src alt>
+                    </div>
+                    <div class="extra-info">
+                        <div class="info-item"><span>Nem</span><span
+                                id="humidity">--%</span></div>
+                        <div class="info-item"><span>Rüzgar</span><span
+                                id="wind">-- km/h</span></div>
+                    </div>
+                </div>
+
+                <div class="weather-forecast" id="forecastContainer">
+                    <div class="forecast-card">
+                        <p class="day">Pzt</p>
+                        <img src="https://openweathermap.org/img/wn/02d.png"
+                            alt>
+                        <p class="temp">18°C</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
